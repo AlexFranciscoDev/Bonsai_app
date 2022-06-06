@@ -1,0 +1,135 @@
+@import './utilities/variables';
+
+/* Header and navbar */
+.header {
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 18px 20px;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #4C4D5F;
+}
+
+/* Style elements*/
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link {
+    color: #0D0D15;
+}
+
+.nav-link:hover {
+    color: black;
+}
+
+.nav-logo img {
+    width: 150px;
+}
+
+.nav-menu .login {
+    background: transparent;
+    padding: 12px 22px 9px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid $main-color;
+    border-radius: 4px;
+    color: $main-color;
+    margin-left: 80px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-menu .login:hover {
+    background: $main-color;
+    color: $color-white;
+}
+
+.nav-menu .startFree {
+    @extend .login;
+    margin-left: 30px;
+    background: $main-color;
+    color: $color-white;
+}
+
+/* Make navbar responsive and display hamburger*/
+@media only screen and (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .nav-menu {
+        position: fixed;
+        /*left: -100%;*/
+        right: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-menu.active {
+        right: 0;
+        padding: 0px 30px;
+    }
+
+    .nav-item {
+        margin: 5px 0;
+        padding: 15px 0px;
+        border-bottom: 1px solid #ccc;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-menu .login {
+        width: 100%;
+        margin: 10px 0px;
+    }
+
+    .nav-menu .startFree {
+        margin-left: 0px;
+    }
+
+    /* Change the hamburger to a cross*/
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
