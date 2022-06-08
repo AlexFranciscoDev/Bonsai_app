@@ -40,10 +40,11 @@
 
 .nav-link {
     color: #0D0D15;
+    transition: all 0.5s linear;
 }
 
 .nav-link:hover {
-    color: black;
+    color: $main-color;
 }
 
 .nav-logo img {

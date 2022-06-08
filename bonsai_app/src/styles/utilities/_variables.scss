@@ -2,3 +2,13 @@ $main-color: #00b289;
 $text-color: #4c4d5f;
 $color-white: #fff;
 $detail-color: #f8db62;
+
+@mixin title_format() {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial;
+    font-size: 18px;
+}
+
+@mixin title_text() {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial;
+    font-size: 16px;
+}

@@ -1,0 +1,89 @@
+@import './utilities/variables';
+
+footer {
+    background: white;
+
+    a {
+        text-decoration: none;
+        color: $text-color;
+    }
+
+    .ft-title {
+        color: $text-color;
+        margin-bottom: 25px;
+        @include title_format();
+    }
+}
+
+
+.ft-main {
+    padding: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ft-main-item {
+    padding: 30px;
+    min-width: 200px;
+}
+
+@media only screen and (min-width: 477px) {
+    .ft-main {
+        padding: 20px 20px;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (min-width: 1240px) {
+    .ft-main {
+        justify-content: space-around;
+    }
+}
+
+.ft-social {
+    padding: 15px 19px;
+}
+
+.ft-social-list {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid $text-color;
+    padding-top: 20px;
+
+    li a {
+        margin-left: 20px;
+    }
+
+    li a img {
+        transition: all 0.5s ease;
+    }
+
+    li a img:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.ft-legal {
+    padding: 15px 19px;
+    background: $main-color;
+}
+
+.ft-legal-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        margin: 12px 10px;
+        white-space: nowrap;
+    }
+
+    li a {
+        color: white;
+    }
+
+    /* one before last child, we make it longer*/
+    li:nth-last-child(2) {
+        flex: 1;
+    }
+}
