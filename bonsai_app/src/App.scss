@@ -1,5 +1,6 @@
 @use "./styles/navbar";
 @use "./styles/footer";
+@use "./styles/bodyStyles/Pricing.scss";
 
 * {
   margin: 0;
@@ -17,4 +18,10 @@ li {
 
 a {
   text-decoration: none;
+}
+
+/* Styles container */
+.container {
+  padding: 110px 40px;
+  width: 100%;
 }
