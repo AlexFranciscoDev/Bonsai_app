@@ -1,6 +1,6 @@
 @import '../utilities/variables';
 
-.pricing_container {
+.pricing_title {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -95,8 +95,82 @@ input:checked+.slider:before {
 /* Rounded sliders */
 .slider.round {
     border-radius: 34px;
-  }
-  
-  .slider.round:before {
+}
+
+.slider.round:before {
     border-radius: 50%;
-  }
+}
+
+/* Styles pricing content */
+.pricing_content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+    padding: 0px 10%;
+    /* cambiar*/
+
+    .plan_div {
+        border: 1px solid rgba(2, 4, 69, .15);
+        border-radius: 5px;
+        background: #fbfcff;
+        box-shadow: 0 0 68px 0 rgb(2 4 69 / 8%);
+        display: flex;
+        flex-direction: column;
+        padding: 6% 4%;
+        width: 32%; /*cambiar*/
+        overflow: hidden;
+
+        h3 {
+            font-size: 26px;
+            color: $text-color;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .price {
+            border-bottom: 1px solid $main-color;
+            display: flex;
+            margin-top: 10px;
+            padding-bottom: 6px;
+
+            .money {
+                position: relative;
+                line-height: 53px;
+                font-size: 30px;
+                font-weight: 400;
+                color: $text-color;
+            }
+
+            .number {
+                font-size: 62px;
+                font-weight: 600;
+                color: $text-color;
+                line-height: 72px;
+                margin-left: 15px;
+            }
+
+            .month {
+                font-weight: 400;
+                font-size: 1.625rem;
+                align-self: end;
+                margin-left: 15px;
+            }
+        }
+
+        ul {
+            margin-bottom: 25px;
+            padding-top: 40px;
+        }
+
+        li {
+            margin-top: 10px;
+        }
+    }
+}
