@@ -118,9 +118,12 @@ input:checked+.slider:before {
         background: #fbfcff;
         box-shadow: 0 0 68px 0 rgb(2 4 69 / 8%);
         display: flex;
+        position: relative;
+        overflow: hidden;
         flex-direction: column;
         padding: 6% 4%;
-        width: 32%; /*cambiar*/
+        width: 32%;
+        /*cambiar*/
         overflow: hidden;
 
         h3 {
@@ -172,5 +175,57 @@ input:checked+.slider:before {
         li {
             margin-top: 10px;
         }
+
+        .start_button {
+            margin-top: 20px;
+            padding: 22px 25px;
+            border-radius: 4px;
+            color: white;
+            background: $main-color;
+            font-weight: 700;
+            text-align: center;
+            letter-spacing: .7px;
+            border: 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .start_button:hover {
+            transform: translateY(-10px);
+        }
+    }
+}
+
+/* Ribbon */
+.ribbon {
+    position: absolute;
+    top: 42px;
+    left: auto;
+    bottom: auto;
+    right: -221px;
+    width: 360px;
+    padding: 11px 100px;
+    background: $main-color;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+    transform: translate(-29.3%) rotate(45deg);
+}
+
+@media only screen and (max-width: 768px) {
+    .pricing_content {
+        padding: 0px;
+
+        .plan_div {
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+
+    .ribbon {
+        font-size: 13px;
+        top: 32px;
+        right: -243px;
     }
 }
