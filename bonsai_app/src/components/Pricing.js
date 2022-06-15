@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import 'boxicons';
 import { Plan } from './Plan';
 /*
@@ -11,9 +11,10 @@ Ribbon: boolean
 Details: [string]
 */
 export const Pricing = () => {
-    const plans = 
+    const plans =
         [
             {
+                "id": 1,
                 "title": "Starter",
                 "description": "Ideal for freelancers and contractors just starting out.",
                 "price_monthly": 24,
@@ -25,6 +26,7 @@ export const Pricing = () => {
                 ]
             },
             {
+                "id": 2,
                 "title": "Professional",
                 "description": "Everything a growing independent business needs to thrive.",
                 "price_monthly": 39,
@@ -36,6 +38,7 @@ export const Pricing = () => {
                 ]
             },
             {
+                "id": 3,
                 "title": "Business",
                 "description": "The perfect package for small businesses and agencies.",
                 "price_monthly": 79,
@@ -47,8 +50,12 @@ export const Pricing = () => {
                 ]
             }
         ]
-    
-    
+
+    const [priceYearly, setPriceYearly] = useState(false);
+    const togglePriceYearly = () => {
+        setPriceYearly(!priceYearly);
+    }
+
     return (
         <div>
             <div className="pricing_title">
@@ -57,7 +64,7 @@ export const Pricing = () => {
                     <span>MONTHLY</span>
                     <div className="switch_toggle">
                         <label className="switch">
-                            <input type="checkbox" />
+                            <input type="checkbox" onClick={ togglePriceYearly } />
                             <span className="slider round"></span>
                         </label>
                     </div>
@@ -65,103 +72,12 @@ export const Pricing = () => {
                     <img src={process.env.PUBLIC_URL + "/img/switchbutton.svg"} alt="Switch button" />
                 </div>
             </div>
+
             <div className="pricing_content">
-                
                 {/* TODO: MAKE COMPONENT */}
-                <div className="plan_div">
-                    <h3>Starter</h3>
-                    <p>Ideal for freelancers and contractors just starting out</p>
-                    <div className="price">
-                        <span className="money">$</span>
-                        <span className="number">24</span>
-                        <span className="month">/MONTH</span>
-                    </div>
-                    <ul>
-                        <li>
-                            <box-icon color="#00b289" name='check'></box-icon> All templates
-                        </li>
-                        <li>
-                            <box-icon color="#00b289" name='check'></box-icon>Unlimited Clients & Projects
-                        </li>
-                        <li>
-                            <box-icon color="#00b289" name='check'></box-icon> Invoicing & Payments
-                        </li>
-                        <li>
-                            <box-icon color="#00b289" name='check'></box-icon> Proposals & Contracts
-                        </li>
-                        <li>
-                            <box-icon color="#00b289" name='check'></box-icon> Tasks & Time Tracking
-                        </li>
-                        <li>
-                            <box-icon color="#00b289" name='check'></box-icon> Client CRM
-                        </li>
-                    </ul>
-                    <button class="start_button">START FREE</button>
-                </div>
-                <div className="plan_div">
-                    {/* Ribbon */}
-                    <div className="ribbon">
-                        MOST POPULAR
-                    </div>
-                    <h3>Starter</h3>
-                    <p>Ideal for freelancers and contractors just starting out</p>
-                    <div className="price">
-                        <span className="money">$</span>
-                        <span className="number">24</span>
-                        <span className="month">/MONTH</span>
-                    </div>
-                    <ul>
-                        <li>
-                            <box-icon color="#00b289" name='check'></box-icon> All templates
-                        </li>
-                        <li>
-                            <box-icon color="#00b289" name='check'></box-icon>Unlimited Clients & Projects
-                        </li>
-                        <li>
-                            <box-icon color="#00b289" name='check'></box-icon> Invoicing & Payments
-                        </li>
-                        <li>
-                            <box-icon color="#00b289" name='check'></box-icon> Proposals & Contracts
-                        </li>
-                        <li>
-                            <box-icon color="#00b289" name='check'></box-icon> Tasks & Time Tracking
-                        </li>
-                        <li>
-                            <box-icon color="#00b289" name='check'></box-icon> Client CRM
-                        </li>
-                    </ul>
-                    <button class="start_button">START FREE</button>
-                </div>
-                <div className="plan_div">
-                    <h3>Starter</h3>
-                    <p>Ideal for freelancers and contractors just starting out</p>
-                    <div className="price">
-                        <span className="money">$</span>
-                        <span className="number">24</span>
-                        <span className="month">/MONTH</span>
-                    </div>
-                    <ul>
-                        <li>
-                            <box-icon color="#00b289" name='check'></box-icon> All templates
-                        </li>
-                        <li>
-                            <box-icon color="#00b289" name='check'></box-icon>Unlimited Clients & Projects
-                        </li>
-                        <li>
-                            <box-icon color="#00b289"name='check'></box-icon> Invoicing & Payments
-                        </li>
-                        <li>
-                            <box-icon color="#00b289" name='check'></box-icon> Proposals & Contracts
-                        </li>
-                        <li>
-                            <box-icon color="#00b289" name='check'></box-icon> Tasks & Time Tracking
-                        </li>
-                        <li>
-                            <box-icon color="#00b289" name='check'></box-icon> Client CRM
-                        </li>
-                    </ul>
-                    <button class="start_button">START FREE</button>
-                </div>
+                {plans.map((plan) =>
+                    <Plan plan={plan} priceYearly={priceYearly} key={plan.id} />
+                )}
             </div>
         </div>
     )

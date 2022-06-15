@@ -106,11 +106,11 @@ input:checked+.slider:before {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     margin-top: 50px;
     width: 100%;
+    height: auto;
     padding: 0px 10%;
-    /* cambiar*/
 
     .plan_div {
         border: 1px solid rgba(2, 4, 69, .15);
@@ -123,9 +123,9 @@ input:checked+.slider:before {
         flex-direction: column;
         padding: 6% 4%;
         width: 32%;
-        /*cambiar*/
         overflow: hidden;
-
+        
+        
         h3 {
             font-size: 26px;
             color: $text-color;
@@ -137,11 +137,13 @@ input:checked+.slider:before {
             margin-top: 10px;
         }
 
-        .price {
+        .price_content {
             border-bottom: 1px solid $main-color;
-            display: flex;
-            margin-top: 10px;
+            margin-top: 15px;
             padding-bottom: 6px;
+        }
+        .price {
+            display: flex;
 
             .money {
                 position: relative;
@@ -165,11 +167,15 @@ input:checked+.slider:before {
                 align-self: end;
                 margin-left: 15px;
             }
+
+            .billedYearly {
+                text-align: end;
+            }
         }
 
         ul {
-            margin-bottom: 25px;
-            padding-top: 40px;
+            margin-bottom: 30px;
+            padding-top: 25px;
         }
 
         li {
@@ -187,6 +193,7 @@ input:checked+.slider:before {
             letter-spacing: .7px;
             border: 0;
             transition: all 0.3s ease-in-out;
+            margin-top: auto;
         }
 
         .start_button:hover {

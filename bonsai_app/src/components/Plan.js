@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react'
 
 /*
 OBJECT PLAN
@@ -9,35 +10,41 @@ Price_yearly: number
 Ribbon: boolean
 Details: [string]
 */
-export const Plan = () => {
+export const Plan = ({ plan, priceYearly }) => {
+
     return (
         <div className="plan_div">
-            <h3>Starter</h3>
-            <p>Ideal for freelancers and contractors just starting out</p>
-            <div className="price">
-                <span className="money">$</span>
-                <span className="number">24</span>
-                <span className="month">/MONTH</span>
+            {/* Ribbon */}
+            {plan.ribbon &&
+                <div className="ribbon">
+                    MOST POPULAR
+                </div>
+            }
+            <h3>{plan.title}</h3>
+            <p>{plan.description}</p>
+            <div className="price_content">
+                <div className="price">
+                    <span className="money">$</span>
+                    {priceYearly ?
+                        <span className="number">{plan.price_yearly}</span>
+                        :
+                        <span className="number">{plan.price_monthly}</span>
+                    }
+                    <span className="month">/MONTH</span>
+                </div>
+                {priceYearly ?
+                    <div className="billedYearly">
+                        <span>Billed yearly</span>
+                    </div>
+                    : ""    
+            }
             </div>
             <ul>
-                <li>
-                    <box-icon color="#00b289" name='check'></box-icon> All templates
-                </li>
-                <li>
-                    <box-icon color="#00b289" name='check'></box-icon>Unlimited Clients & Projects
-                </li>
-                <li>
-                    <box-icon color="#00b289" name='check'></box-icon> Invoicing & Payments
-                </li>
-                <li>
-                    <box-icon color="#00b289" name='check'></box-icon> Proposals & Contracts
-                </li>
-                <li>
-                    <box-icon color="#00b289" name='check'></box-icon> Tasks & Time Tracking
-                </li>
-                <li>
-                    <box-icon color="#00b289" name='check'></box-icon> Client CRM
-                </li>
+                {plan.details.map((detail) =>
+                    <li>
+                        <box-icon color="#00b289" name='check'></box-icon> {detail}
+                    </li>
+                )}
             </ul>
             <button class="start_button">START FREE</button>
         </div>
