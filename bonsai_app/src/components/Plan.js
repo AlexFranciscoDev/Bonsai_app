@@ -42,11 +42,11 @@ export const Plan = ({ plan, priceYearly }) => {
             <ul>
                 {plan.details.map((detail) =>
                     <li>
-                        <box-icon color="#00b289" name='check'></box-icon> {detail}
+                        <box-icon color="#00b289" name='check' key={detail}></box-icon> {detail}
                     </li>
                 )}
             </ul>
-            <button class="start_button">START FREE</button>
+            <button className="start_button">START FREE</button>
         </div>
     )
 }

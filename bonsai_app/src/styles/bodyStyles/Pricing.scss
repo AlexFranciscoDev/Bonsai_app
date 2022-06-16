@@ -168,8 +168,9 @@ input:checked+.slider:before {
                 margin-left: 15px;
             }
 
-            .billedYearly {
+            .billedYearly span {
                 text-align: end;
+                display: block;
             }
         }
 

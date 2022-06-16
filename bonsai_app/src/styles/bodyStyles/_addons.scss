@@ -1,0 +1,62 @@
+@import '../utilities/variables';
+
+.addons_container {
+    margin-top: 60px;
+    padding: 0 10%;
+
+    h2 {
+        text-align: center;
+        font-weight: 500;
+        margin-bottom: 40px;
+    }
+
+    .addon {
+        display: flex;
+        flex-direction: row;
+        background: #FFFFFF;
+        margin-bottom: 15px;
+        padding: 40px;
+        align-items: center;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 0 60px 0 rgba(2, 4, 69, 0.103);
+
+        .addon_desc {
+            width: 80%;
+
+            h4 {
+                font-weight: 600;
+                font-size: 1.375rem;
+                line-height: 1.4;
+                color: $title-color;
+            }
+
+            p {
+                color: $text-color;
+            }
+
+            a {
+                color: $main-color;
+                font-weight: 500;
+                margin-top: 5px;
+                display: block;
+            }
+        }
+
+        .addon_price {
+            width: 20%;
+
+            h3 {
+                font-size: 40px;
+                font-weight: 700;
+                text-align: center;
+                color: $title-color;
+            }
+            h5 {
+                text-align: center;
+                font-weight: 400;
+            }
+        }
+    }
+
+}
