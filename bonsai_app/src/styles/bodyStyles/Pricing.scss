@@ -169,7 +169,7 @@ input:checked+.slider:before {
             }
 
             .billedYearly span {
-                text-align: end;
+                text-align: right !important;
                 display: block;
             }
         }

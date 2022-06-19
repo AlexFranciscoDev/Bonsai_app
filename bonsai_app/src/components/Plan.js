@@ -41,8 +41,8 @@ export const Plan = ({ plan, priceYearly }) => {
             </div>
             <ul>
                 {plan.details.map((detail) =>
-                    <li>
-                        <box-icon color="#00b289" name='check' key={detail}></box-icon> {detail}
+                    <li key={detail}>
+                        <box-icon color="#00b289" name='check'></box-icon> {detail}
                     </li>
                 )}
             </ul>
