@@ -1,0 +1,12 @@
+@import '../utilities/variables';
+
+/* activate toggle*/
+.accordion_item.active .button {
+    color: $main-color;
+}
+
+.answer_wrapper {
+    height: 0;
+    overflow: hidden;
+    transition: height ease 0.4s;
+}

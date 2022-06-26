@@ -4,6 +4,7 @@ import { Footer } from "./components/Footer";
 import { Pricing } from './components/Pricing';
 import { Addons } from './components/Addons';
 import { StartFree } from './components/StartFree';
+import { Faqs } from './components/Faqs';
 //import './prueba.scss'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Pricing />
         <Addons />
         <StartFree/>
+        <Faqs/>
       </div>
       <Footer />
     </div>
