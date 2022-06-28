@@ -3,8 +3,8 @@ import { Accordion } from './Accordion'
 
 export const Faqs = () => {
   return (
-    <div>
-        <h2>FAQS</h2>
+    <div className="faqsContainer">
+        <h2 className="faqsTitle">FAQS</h2>
         <Accordion/>
     </div>
   )

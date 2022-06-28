@@ -10,3 +10,47 @@
     overflow: hidden;
     transition: height ease 0.4s;
 }
+
+.faqsContainer {
+    padding: 0 16%;
+
+    .faqsTitle {
+        color: $main-color;
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+.accordion_item {
+
+    .button {
+        font-size: 19px;
+        font-family: "Montserrat", "Helvetica Neue", Arial;
+        font-weight: 800;
+        color: $text-color;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 30px;
+        cursor: pointer;
+        border: none;
+        background: none;
+    }
+
+    .control {
+        font-size: 19px;
+    }
+
+    .answer {
+        padding: 15px 30px;
+      }
+}
+
+@media only screen and (max-width: 768px) {
+    .faqsContainer {
+        padding: 0;
+    }
+}
