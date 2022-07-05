@@ -13,6 +13,10 @@ footer {
         margin-bottom: 25px;
         @include title_format();
     }
+
+    ul li {
+        margin: 10px 0px;
+    }
 }
 
 
@@ -86,6 +90,19 @@ footer {
     li:nth-last-child(2) {
         flex: 1;
     }
+}
+
+/* Footer dropdowns */
+.invoiceTemplates {
+    img {
+        margin-left: 10px;
+    }
+}
+
+.invoiceTemplateDropdown {
+    height: 0;
+    overflow: hidden;
+    transition: height ease 0.4s;
 }
 
 @media only screen and (max-width: 768px) {

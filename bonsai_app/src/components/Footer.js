@@ -1,20 +1,12 @@
-import React from 'react'
+import React, { useState, useRef } from 'react'
 
 export const Footer = () => {
-    const accordion = document.getElementsByClassName("accordion");
-    for (var i = 0; i < accordion.length; i++) {
-        accordion[i].addEventListener("click", () => {
-            {/* Toggle between adding or removing the active class */ }
-            this.classList.toggle("active");
-            {/* Toggle between hiding and showing the active panel*/ }
-            var panel = this.nextElementSibling;
-            console.log(panel);
-            if (panel.style.display === "block") {
-                panel.style.display = "none";
-            } else {
-                panel.style.display = "block";
-            }
-        });
+
+    const [clicked, setClicked] = useState(false);
+    const contentEl = useRef();
+
+    const handleToggle = () => {
+        setClicked((prev) => !prev);
     }
 
     return (
@@ -47,6 +39,25 @@ export const Footer = () => {
                         <li><a href="/#">Self-Employed Taxes Hub</a></li>
                         <li><a href="/#">Self-Employed Tax Calculator</a></li>
                         <li><a href="/#">Self-Employed Tax Deductions</a></li>
+                        <div className="invoiceTemplates">
+                            <span onClick={handleToggle}>Invoice templates</span>
+                            <span><img src="https://assets-global.website-files.com/58868bcd2ef4daaf0f072900/5f5a14486154c507c79e758f_001-down-chevron.svg" width="10" /></span>
+                        </div>
+                        <div ref={contentEl} className="invoiceTemplateDropdown"
+                            style={clicked ? { height: contentEl.current.scrollHeight } : { height: "0px" }}>
+                            <ul>
+                                <li><a href="/#">Invoice generator</a></li>
+                                <li><a href="/#">Blank Invoice template</a></li>
+                                <li><a href="/#">Consultant Invoice template</a></li>
+                                <li><a href="/#">Editable Invoice template</a></li>
+                                <li><a href="/#">Graphic design invoice</a></li>
+                                <li><a href="/#">Web design invice</a></li>
+                                <li><a href="/#">Contractor invoice template</a></li>
+                                <li><a href="/#">Photography Invoice template</a></li>
+                                <li><a href="/#">Self employed template</a></li>
+                            </ul>
+                        </div>
+                        <li>Proposal templates</li>
                     </ul>
                 </div>
                 <div className="ft-main-item">

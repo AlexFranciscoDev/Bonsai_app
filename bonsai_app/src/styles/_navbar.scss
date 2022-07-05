@@ -28,7 +28,7 @@
 }
 
 /* Style elements*/
-.nav-menu {
+.navMenu {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,7 +52,7 @@
     width: 150px;
 }
 
-.nav-menu .login {
+.navMenu .login {
     background: transparent;
     padding: 12px 22px 9px;
     font-size: 13px;
@@ -65,12 +65,12 @@
     transition: all 0.3s ease-in-out;
 }
 
-.nav-menu .login:hover {
+.navMenu .login:hover {
     background: $main-color;
     color: $color-white;
 }
 
-.nav-menu .startFree {
+.navMenu .startFree {
     @extend .login;
     margin-left: 30px;
     background: $main-color;
@@ -83,7 +83,7 @@
         justify-content: space-between;
     }
 
-    .nav-menu {
+    .navMenu {
         position: fixed;
         /*left: -100%;*/
         right: -100%;
@@ -96,7 +96,7 @@
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.3);
     }
 
-    .nav-menu.active {
+    .navMenu.active {
         right: 0;
         padding: 0px 30px;
     }
@@ -113,12 +113,12 @@
         cursor: pointer;
     }
 
-    .nav-menu .login {
+    .navMenu .login {
         width: 100%;
         margin: 10px 0px;
     }
 
-    .nav-menu .startFree {
+    .navMenu .startFree {
         margin-left: 0px;
     }
 
