@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# 🌿 Bonsai Pricing Page Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive pricing/landing page made from one of the challenges from the website [Frontend practice] (https://www.frontendpractice.com/projects/bonsai), built to practice component-based UI development, SCSS architecture, and interactive UI patterns in React.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🛠 Technologies
 
-### `npm start`
+- React (Create React App)
+- SCSS / SASS
+- Boxicons
+- React Testing Library (included in the setup)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ✨ Features
 
-### `npm test`
+- Responsive navbar with mobile hamburger menu
+- Pricing plans section with **Monthly / Yearly** toggle
+- “Most Popular” ribbon for highlighted plan
+- Add-ons section layout
+- FAQs section with custom accordion component
+- Footer with multiple link sections
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🧩 The Process
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project was built as a UI-focused clone with an emphasis on clean component separation:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Reusable components** (Navbar, Pricing, Plan, Addons, Accordion, Footer)
+- UI interactivity handled with small, focused state:
+  - Pricing toggle using `useState`
+  - Accordion open/close behavior with `useState` + `useRef`
+- Styles organized with SCSS partials and a shared variables file to keep consistency across the UI
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📚 What I Learned
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Building responsive navigation patterns (hamburger menu)
+- Structuring a small React UI project using reusable components
+- Managing UI state (toggles, accordions) in a and readable way
+- Organizing SCSS with partials and shared variables for scalability
+- Use of `useState` + `useRef`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🔮 Improvements
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Add a real routing flow (e.g., Pricing, Templates, Reviews pages)
+- Improve accessibility (ARIA attributes for accordion and menu)
+- Add unit tests for key UI components (Pricing toggle, Accordion behavior)
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ▶️ Running the Project
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Clone the repository:
 
-### Code Splitting
+```bash
+git clone https://github.com/AlexFranciscoDev/Bonsai_app.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Install dependencies:
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+npm install
+```
+Run the app locally:
+```
+npm start
+```
+The app will be available at:
+http://localhost:3000
