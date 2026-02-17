@@ -76,5 +76,5 @@ http://localhost:3000
 
 ## 🎥 Preview
 
-![Bonsai Demo](./Bonsai-app.gif)
+![Bonsai Demo](https://github.com/AlexFranciscoDev/Bonsai_app/blob/main/preview/Bonsai-app.gif)
 
