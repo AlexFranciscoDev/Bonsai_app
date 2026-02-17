@@ -73,3 +73,8 @@ npm start
 ```
 The app will be available at:
 http://localhost:3000
+
+## 🎥 Preview
+
+![Bonsai Demo](./Bonsai-app.gif)
+
